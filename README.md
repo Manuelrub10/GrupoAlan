@@ -1,3 +1,3 @@
 # Aplicación para Grupo Alan
 
-En este repositorio está todo el codigo de la aplicación que estuve desarrollando para la empresa de Grupo Alan. Uso tecnologías como Java Spring Boot para el back-end y Angular para el desarrollo front-end.
+Grupo Alan es una empresa de serigrafía, aquí cursé mi periodo de prácticas, en donde me encargaba de desarrollar una aplicación desde 0; Dicha aplicación se desarrolló con Angular 17 para el front, y con Spring boot para el back, luego la base de datos se hizo con MySQL
