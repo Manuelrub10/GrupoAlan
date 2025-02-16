@@ -1,0 +1,166 @@
+/* Estilo para el contenedor */
+.container-fluid {
+    padding: 0;
+}
+
+/*PANEL DE CONTROL*/
+/* cards.css */
+
+.card {
+    border-radius: 1rem;
+    /* Add rounded corners to cards */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    /* Add subtle shadow */
+    transition: all 0.3s ease;
+    /* Enable smooth transitions */
+    margin-bottom: 20px;
+}
+
+.card:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Enhance shadow on hover */
+}
+
+.card-body {
+    padding: 20px;
+    /* Adjust card body padding */
+}
+
+.illustration-text {
+    margin: 0;
+    /* Remove default margins */
+}
+
+.illustration-img {
+    max-width: 80px;
+    /* Adjust image size */
+    height: auto;
+    /* Maintain aspect ratio */
+}
+
+.stat svg {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    /* Use card body text color for icons */
+}
+
+.badge {
+    font-size: 0.8rem;
+    /* Reduce badge size */
+}
+
+#top-selling-products {
+    /* Target the card with the id "top-selling-products" */
+    border: 1px solid #ddd;
+    /* Add a thin border */
+    border-radius: 5px;
+    /* Add rounded corners */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    /* Add a subtle shadow */
+    background-color: #f8f9fa;
+    /* Set a light background color */
+    margin-bottom: 20px;
+    /* Add some space below the card */
+}
+
+.list-group-item {
+    /* Style the list items */
+    padding: 10px 15px;
+    /* Add some padding */
+    border-bottom: 1px solid #eee;
+    /* Add a border between items */
+}
+
+.list-group-item:last-child {
+    /* Style the last list item */
+    border-bottom: none;
+    /* Remove the bottom border for the last item */
+}
+
+.img-fluid {
+    /* Adjust image size and style */
+    max-width: 75px;
+    height: auto;
+    object-fit: cover;
+    /* Maintain aspect ratio and crop if necessary */
+}
+
+/* Target elements within #top-viewed-products */
+#top-viewed-products .card {
+    margin-bottom: 20px;
+    border: none;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#top-viewed-products .card-header {
+    background-color: #f8f9fa;
+    padding: 15px 20px;
+    border-bottom: 1px solid #ddd;
+}
+
+#top-viewed-products .card-body {
+    padding: 20px;
+}
+
+#top-viewed-products .list-group {
+    margin: 0;
+    padding: 0;
+}
+
+#top-viewed-products .list-group-item {
+    border-top: 1px solid #ddd;
+    padding: 15px;
+    cursor: pointer;
+}
+
+#top-viewed-products .list-group-item:hover {
+    background-color: #f0f0f0;
+}
+
+#top-viewed-products .product-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#top-viewed-products .product-item img {
+    max-width: 80px;
+    height: auto;
+    margin-right: 20px;
+}
+
+#top-viewed-products .product-item h4 {
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+#top-viewed-products .product-item p {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+#top-viewed-products .badge {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+/* Specific badge colors */
+#top-viewed-products .badge-primary {
+    background-image: linear-gradient(to right, #007bff 0%, #00c5ec 100%);
+    color: #fff;
+    border: none;
+    /* Remove border for a cleaner look */
+}
+
+
+#top-viewed-products .badge-success {
+    background-color: #28a745;
+    color: #fff;
+}
+
+#top-viewed-products .badge-info {
+    background-color: #17a2b8;
+    color: #fff;
+}

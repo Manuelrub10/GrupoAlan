@@ -1,0 +1,57 @@
+<app-header></app-header>
+<main class="container-fluid d-flex justify-content-center align-items-center p-4 text-center">
+  <div class="d-flex justify-content-center align-items-center" *ngIf="loading">
+    <div class="spinner-border m-5" role="status">
+      <!-- Spinner -->
+    </div>
+  </div>
+
+  <!-- PRODUCTOS -->
+  <div class="row">
+    <div *ngIf="!loading">
+      <h1 class="text-center mb-4">PRODUCTOS</h1>
+      <h2 class="text-center mb-5">Bienvenido a toda la gama de productos que ofrecemos</h2>
+    </div>
+    <div class="col-md-3 mb-3" *ngFor="let item of products">
+      <div class="card" (click)="irAProduct(item.ref)">
+        <img *ngIf="item.images && item.images[0]" [src]="item.images[0].imgMax" [alt]="item.name" class="card-img-top">
+        <div class="card-body">
+          <p class="card-text">{{ item.name }}</p>
+          <div class="delivery-info">
+            <p class="delivery-title">RECÍBELO:</p>
+            <dl class="delivery-dates">
+              <dt>Sin personalizar:</dt>
+              <dd>6 May. - 7 May.</dd>
+              <dt>Personalizado:</dt>
+              <dd>9 May. - 10 May.</dd>
+            </dl>
+          </div>
+          <!-- COLORES -->
+          <div *ngIf="item.variants && item.variants.length > 0" class="color-options">
+            <div class="d-flex flex-wrap">
+              <ng-container *ngFor="let variant of item.variants">
+                <ng-container *ngIf="variant.colorSet">
+                  <img [src]="variant.colorSet.url" [alt]="variant.colorSet.name" class="color-option me-2 mb-2">
+                </ng-container>
+                <ng-container *ngIf="!variant.colorSet">
+                  <p>Color Unico</p>
+                </ng-container>
+              </ng-container>
+            </div>
+          </div>
+
+          <div class="product-price">
+            <span class="price-from">Desde <strong>€2.08</strong></span>
+            <span class="price-to">a <strong>€5.32</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- BOTONES PARA CAMBIAR DE PÁGINA -->
+<div *ngIf="!loading" class="d-flex justify-content-center">
+  <button class="btn btn-primary me-2" (click)="paginaAnterior()" [disabled]="currentPage === 0">Anterior</button>
+  <button class="btn btn-primary" (click)="paginaSiguiente()">Siguiente</button>
+</div>

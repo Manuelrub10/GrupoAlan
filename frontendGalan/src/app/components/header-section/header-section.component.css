@@ -1,0 +1,10 @@
+/* Estilos para el primer div */
+.header-wrapper {
+  background-color: #038C7F; /* Color verde azulado */
+  color: #ffffff; /* Texto blanco */
+  padding: 10px; /* Espaciado interno */
+}
+
+.header-wrapper span {
+  cursor: pointer; /* Cambio de cursor a mano */
+}
